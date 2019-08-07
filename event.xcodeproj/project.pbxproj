@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0A9E3322F56951007D0C92 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A9E3222F56951007D0C92 /* Profile.storyboard */; };
 		DB0AF99E22E9BD81000FABD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */; };
 		DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20702422EB128C00A138E0 /* AlertViewController.swift */; };
 		DB3E9A7F22F524630058B08E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E9A7E22F524630058B08E /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		3F5F650445527F761DBC5A73 /* Pods_event.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_event.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0A9E3222F56951007D0C92 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB20702422EB128C00A138E0 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		DB3D2EC722EB5806007C7DC9 /* event.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = event.entitlements; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				DB3E9A7E22F524630058B08E /* Main.storyboard */,
 				DB64F39722E8AF7900049015 /* Login.storyboard */,
+				DB0A9E3222F56951007D0C92 /* Profile.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0A9E3322F56951007D0C92 /* Profile.storyboard in Resources */,
 				DB64F38A22E89DE100049015 /* LaunchScreen.storyboard in Resources */,
 				DB3E9A7F22F524630058B08E /* Main.storyboard in Resources */,
 				DB64F39622E8A3F500049015 /* GoogleService-Info.plist in Resources */,
