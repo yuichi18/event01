@@ -44,8 +44,8 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
         // 認証に成功した場合
         if error == nil {
 //            self.performSegue(withIdentifier: "toTopView", sender: self)
-//            self.presentProfile()
-            self.performSegueProfile()
+            self.presentProfile()
+//            self.performSegueProfile()
 
         }
     
@@ -54,10 +54,17 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
     
     //遷移
     func presentProfile() {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let profileNavi = storyboard.instantiateViewController(withIdentifier: "toProfileView")
         self.present(profileNavi, animated: true, completion: nil)
     }
+
+//    func presentProfile() {
+//        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//        let profileNavi = storyboard.instantiateViewController(withIdentifier: "toProfileView")
+//        self.present(profileNavi, animated: true, completion: nil)
+//    }
+    
     
     //遷移
     func performSegueProfile(){
