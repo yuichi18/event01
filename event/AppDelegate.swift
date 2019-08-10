@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        FirebaseApp.configure()
         //Twitter認証用のイニシャライズ
 //        TWTRTwitter.sharedInstance().start(withConsumerKey:"twitterのAPIキー",consumerSecret:"twitterのAPIシークレット")
+        
+        if (Auth.auth().currentUser != nil) {
+            try? Auth.auth().signOut()
+        }
         return true
     }
     
