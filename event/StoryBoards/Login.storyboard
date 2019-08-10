@@ -33,8 +33,7 @@
                     <navigationItem key="navigationItem" id="7j5-Yu-oSK"/>
                     <connections>
                         <outlet property="AuthBtn" destination="xYa-Wm-kIi" id="X3S-FI-1Jc"/>
-                        <segue destination="B6v-ke-rvX" kind="show" identifier="showToProfileViewold" id="rKr-Av-YyO"/>
-                        <segue destination="dFc-RB-3e5" kind="show" identifier="showToProfileViewold" id="3aC-WW-BV7"/>
+                        <segue destination="B6v-ke-rvX" kind="show" identifier="showToProfileView" id="rKr-Av-YyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgg-A9-UZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,14 +117,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGe-VG-vta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="-115"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="zRV-xa-dzP">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Profile" id="dFc-RB-3e5" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CVH-iG-a4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="932" y="421"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JGQ-Mp-qvT">

@@ -41,33 +41,27 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
     
     //　認証画面から離れたときに呼ばれる（キャンセルボタン押下含む）
     public func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?){
-        // 認証に成功した場合
-        if error == nil {
-//            self.performSegue(withIdentifier: "toTopView", sender: self)
-            self.presentProfile()
-//            self.performSegueProfile()
-
-        }
-    
         // エラー時の処理をここに書く
+        if let error = error {
+            print((error as NSError).debugDescription)
+            return
+        }
+        // 認証に成功した場合
+        self.presentProfile()
+//            self.performSegueProfile()
+    
     }
     
     //遷移
     func presentProfile() {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let profileNavi = storyboard.instantiateViewController(withIdentifier: "toProfileView")
-        self.present(profileNavi, animated: true, completion: nil)
-    }
-
-//    func presentProfile() {
-//        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-//        let profileNavi = storyboard.instantiateViewController(withIdentifier: "toProfileView")
+        self.navigationController?.pushViewController(profileNavi, animated: true)
 //        self.present(profileNavi, animated: true, completion: nil)
-//    }
-    
+    }
     
     //遷移
-    func performSegueProfile(){
-        self.performSegue(withIdentifier: "showToProfileView", sender: nil)
-    }
+//    func performSegueProfile(){
+//        self.performSegue(withIdentifier: "showToProfileView", sender: nil)
+//    }
 }
