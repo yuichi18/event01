@@ -18,18 +18,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var ageFieldText: UITextField!
     
     let profileUseCase = ProfileUseCase()
-//    let id = Auth.auth().currentUser?.uid
-    
     var profile = Profile(value: [:])
 //    var didChangeImage = false
-    
-//    func createprofile() -> Profile {
-//        guard let uid = Auth.auth().currentUser?.uid else {
-//            fatalError ("Uidを取得出来ませんでした。")
-//        }
-////        let id = Auth.auth().currentUser?.uid
-//        return Profile(id: uid, value: [:])
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

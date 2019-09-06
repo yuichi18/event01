@@ -47,6 +47,7 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
             return
         }
         // 認証に成功した場合
+//        既にログインしている時の遷移を記載する
         self.presentProfile()
 //            self.performSegueProfile()
     

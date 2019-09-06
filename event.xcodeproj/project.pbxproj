@@ -20,6 +20,11 @@
 		DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */; };
 		DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB751CF6232121DC00B1914E /* MainViewController.swift */; };
 		DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB2EEA22EBB4C70017C694 /* Login.swift */; };
+		DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */; };
+		DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0923227FED0072B4E8 /* Shop.swift */; };
+		DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */; };
+		DBFD3E0E23228A9E0072B4E8 /* ShopCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0D23228A9E0072B4E8 /* ShopCollection.swift */; };
+		DBFD3E1023228B390072B4E8 /* ShopUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0F23228B390072B4E8 /* ShopUseCase.swift */; };
 		DBFDB8AF22E9157C009AE68A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDB8AE22E9157C009AE68A /* LoginViewController.swift */; };
 		E79C39BBE3D664C5DB67BCB6 /* Pods_event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5F650445527F761DBC5A73 /* Pods_event.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +47,11 @@
 		DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
 		DB751CF6232121DC00B1914E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DBFB2EEA22EBB4C70017C694 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		DBFD3E0923227FED0072B4E8 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchViewController.swift; sourceTree = "<group>"; };
+		DBFD3E0D23228A9E0072B4E8 /* ShopCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollection.swift; sourceTree = "<group>"; };
+		DBFD3E0F23228B390072B4E8 /* ShopUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopUseCase.swift; sourceTree = "<group>"; };
 		DBFDB8AE22E9157C009AE68A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E80021310D19DA559C54699E /* Pods-event.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-event.release.xcconfig"; path = "Target Support Files/Pods-event/Pods-event.release.xcconfig"; sourceTree = "<group>"; };
 		FC211BCEDD2AFE78D328A21A /* Pods-event.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-event.debug.xcconfig"; path = "Target Support Files/Pods-event/Pods-event.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				DBFDB8AE22E9157C009AE68A /* LoginViewController.swift */,
+				DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */,
 				DB751CF6232121DC00B1914E /* MainViewController.swift */,
+				DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */,
 				DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -144,7 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				DB6D2CCB22F45FBC006901F0 /* Profile.swift */,
+				DBFD3E0923227FED0072B4E8 /* Shop.swift */,
+				DBFD3E0D23228A9E0072B4E8 /* ShopCollection.swift */,
 				DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */,
+				DBFD3E0F23228B390072B4E8 /* ShopUseCase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,10 +316,15 @@
 				DB0AF99E22E9BD81000FABD5 /* ProfileViewController.swift in Sources */,
 				DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */,
 				DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */,
+				DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */,
 				DBFDB8AF22E9157C009AE68A /* LoginViewController.swift in Sources */,
+				DBFD3E1023228B390072B4E8 /* ShopUseCase.swift in Sources */,
+				DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */,
 				DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */,
 				DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */,
 				DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */,
+				DBFD3E0E23228A9E0072B4E8 /* ShopCollection.swift in Sources */,
+				DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */,
 				DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
