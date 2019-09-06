@@ -44,7 +44,7 @@
         <!--Main-->
         <scene sceneID="lYv-fF-k8V">
             <objects>
-                <viewController id="Uw7-Cf-Y58" sceneMemberID="viewController">
+                <viewController id="Uw7-Cf-Y58" customClass="MainViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GHY-J1-AHM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="2PA-xY-lZr">
             <objects>
-                <tabBarController id="4yd-Ug-3bQ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="4yd-Ug-3bQ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fq8-Wk-mdL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -114,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="-124" y="-113"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="3CW-z6-o9K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZNu-LB-eP3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NUf-IB-pp7"/>
+                    <tabBarItem key="tabBarItem" id="NUf-IB-pp7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fM4-Cr-XoL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

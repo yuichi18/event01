@@ -18,6 +18,7 @@
 		DB64F39822E8AF7900049015 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB64F39722E8AF7900049015 /* Login.storyboard */; };
 		DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D2CCB22F45FBC006901F0 /* Profile.swift */; };
 		DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */; };
+		DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB751CF6232121DC00B1914E /* MainViewController.swift */; };
 		DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB2EEA22EBB4C70017C694 /* Login.swift */; };
 		DBFDB8AF22E9157C009AE68A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDB8AE22E9157C009AE68A /* LoginViewController.swift */; };
 		E79C39BBE3D664C5DB67BCB6 /* Pods_event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5F650445527F761DBC5A73 /* Pods_event.framework */; };
@@ -39,6 +40,7 @@
 		DB64F39722E8AF7900049015 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		DB6D2CCB22F45FBC006901F0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
+		DB751CF6232121DC00B1914E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DBFB2EEA22EBB4C70017C694 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		DBFDB8AE22E9157C009AE68A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E80021310D19DA559C54699E /* Pods-event.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-event.release.xcconfig"; path = "Target Support Files/Pods-event/Pods-event.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				DBFDB8AE22E9157C009AE68A /* LoginViewController.swift */,
+				DB751CF6232121DC00B1914E /* MainViewController.swift */,
 				DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -302,6 +305,7 @@
 				DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */,
 				DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */,
 				DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */,
+				DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

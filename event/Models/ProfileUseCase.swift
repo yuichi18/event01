@@ -15,20 +15,58 @@ class ProfileUseCase {
     
     let db = Firestore.firestore()
     let storageRef = Storage.storage().reference()
-    var profile = Profile(value: [:])
+    
     
     //uid取得
+//    private func getProfileDocumentRef() -> CollectionReference {
     func getProfileDocumentRef() -> DocumentReference {
         guard let uid = Auth.auth().currentUser?.uid else {
             fatalError ("Uidを取得出来ませんでした。")
         }
-        return self.db.collection("users").document(uid)
+        return
+            self.db.collection("users").document(uid)
+//            self.db.collection("users").document(uid).collection("profile")
 //            self.db.collection("users").document(uid).collection("profile").document("profile")
     }
+    
+//    func getUid() -> String {
+//        guard let uid = Auth.auth().currentUser?.uid else {
+//            fatalError ("Uidを取得出来ませんでした。")
+//        }
+//        return
+//            uid
+//    }
+    
+    //
+//    func createprofileid() -> Profile {
+//        guard let uid = Auth.auth().currentUser?.uid else {
+//            fatalError ("Uidを取得出来ませんでした。")
+//        }
+//        //        let id = Auth.auth().currentUser?.uid
+//        return Profile(id: uid, value: [:])
+//    }
+
+    
+//    let id = self.getUid()
+//    var profile = Profile(id: id,value: [:])
+    
+//    func createTaskId() -> String {
+//        let id = self.getProfileDocumentRef().document().documentID
+//        print("taskIdは",id)
+//        return id
+//    }
+//    guard let uid = Auth.auth().currentUser?.uid else {return}
+    
+//    let id = Auth.auth().currentUser?.uid
+//    let id = self.getProfileDocumentRef().document().documentID
+//    var profile = Profile(id: id, value: [:])
+    
     
     //Profile登録
     func createProfile(_ profile: Profile){
         let documentRef = self.getProfileDocumentRef()
+//        let documentRef = self.getProfileDocumentRef().document(profile.id)
+//        let documentRef = self.getProfileDocumentRef().document()
         documentRef.setData(profile.toValueDict()) { (err) in
             if let _err = err {
                 print("データ追加失敗",_err)

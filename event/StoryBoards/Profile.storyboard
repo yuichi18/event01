@@ -12,19 +12,95 @@
         <!--Profile-->
         <scene sceneID="zFC-fU-3tI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AeA-LP-K5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="toProfileView" id="Kxv-Fn-bC0" customClass="ProfileViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ANz-4r-Mlk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.60419307" blue="0.20967209170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-d6-Ky7">
+                                <rect key="frame" x="100" y="120" width="175" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="z2A-sk-QJB"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="名前を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-cf-GNV">
+                                <rect key="frame" x="0.0" y="370" width="375" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QTc-sJ-vZT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="性別を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-JW-8QG">
+                                <rect key="frame" x="0.0" y="420" width="375" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2tF-CH-LMS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="年齢を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keC-0F-Flk">
+                                <rect key="frame" x="0.0" y="470" width="375" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4dW-lE-UDf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="CPB-V8-QGT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-4R-pgH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="プロフィール" id="PqW-wm-h80"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gDL-d6-Ky7" firstAttribute="leading" secondItem="adv-QZ-qgg" secondAttribute="leading" constant="100" id="1Bk-ID-Rc1"/>
+                            <constraint firstItem="OtG-JW-8QG" firstAttribute="leading" secondItem="adv-QZ-qgg" secondAttribute="leading" id="Ecd-4w-r2n"/>
+                            <constraint firstItem="keC-0F-Flk" firstAttribute="leading" secondItem="adv-QZ-qgg" secondAttribute="leading" id="FQQ-XY-zZU"/>
+                            <constraint firstItem="gDL-d6-Ky7" firstAttribute="top" secondItem="adv-QZ-qgg" secondAttribute="top" constant="100" id="IOm-PM-x2i"/>
+                            <constraint firstAttribute="trailing" secondItem="keC-0F-Flk" secondAttribute="trailing" id="Kli-xp-5ze"/>
+                            <constraint firstItem="keC-0F-Flk" firstAttribute="top" secondItem="OtG-JW-8QG" secondAttribute="bottom" id="NFW-CG-6yz"/>
+                            <constraint firstAttribute="trailing" secondItem="OtG-JW-8QG" secondAttribute="trailing" id="Yaj-Dw-0gj"/>
+                            <constraint firstItem="6lQ-cf-GNV" firstAttribute="top" secondItem="gDL-d6-Ky7" secondAttribute="bottom" constant="100" id="arf-OL-wbp"/>
+                            <constraint firstItem="adv-QZ-qgg" firstAttribute="trailing" secondItem="gDL-d6-Ky7" secondAttribute="trailing" constant="100" id="bqr-7P-pP7"/>
+                            <constraint firstItem="6lQ-cf-GNV" firstAttribute="leading" secondItem="adv-QZ-qgg" secondAttribute="leading" id="dlX-lT-3NT"/>
+                            <constraint firstAttribute="trailing" secondItem="6lQ-cf-GNV" secondAttribute="trailing" id="og3-Sb-j3D"/>
+                            <constraint firstItem="OtG-JW-8QG" firstAttribute="top" secondItem="6lQ-cf-GNV" secondAttribute="bottom" id="sz5-eC-8wc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="adv-QZ-qgg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Kce-f8-5dH"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Kce-f8-5dH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fgI-MR-V3s">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YTh-9P-EMu" userLabel="Save">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="registerdTappedBtn:" destination="Kxv-Fn-bC0" eventType="touchUpInside" id="d0X-Wq-vsg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ageFieldText" destination="keC-0F-Flk" id="JC3-nu-D6r"/>
+                        <outlet property="genderFieldText" destination="OtG-JW-8QG" id="xjb-BT-QYe"/>
+                        <outlet property="userNameFieldText" destination="6lQ-cf-GNV" id="kMI-W0-Jdm"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AeA-LP-K5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="-11.244377811094454"/>
+            <point key="canvasLocation" x="820" y="-183"/>
         </scene>
     </scenes>
 </document>
