@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseUI
+import FirebaseAuth
 
 class LoginViewController: UIViewController,FUIAuthDelegate {
     
@@ -16,6 +17,8 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
     @IBOutlet weak var AuthBtn: UIButton!
     @IBOutlet weak var ClientBtn: UIButton!
     var presentProfileIdentification: Int! = 0
+    let db = Firestore.firestore()
+    var checkProfile: String! = ""
     
     
     var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
@@ -54,11 +57,19 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
             return
         }
         // 認証に成功した場合
+        
+        //プロフィール登録有無チェック
+        let checkProfile = checkProfileCreated()
+print(checkProfile)
 //        既にログインしている時の遷移を記載する
+        
         if presentProfileIdentification == 0 {
+//            if checkProfile == "" {
                 self.presentProfile()
-//                var presentstoryBoardName :String! = "Profile"
-//                var presentwithIdentifierName :String! = "toProfileView"
+//            }
+//            else {
+//                self.presentMain()
+//            }
         }
         else {
                 self.presentClientProfile()
@@ -84,6 +95,13 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
         self.navigationController?.pushViewController(profileNavi, animated: true)
 //        self.present(profileNavi, animated: true, completion: nil)
     }
+    
+    func presentMain() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileNavi = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+        self.navigationController?.pushViewController(profileNavi, animated: true)
+        //        self.present(profileNavi, animated: true, completion: nil)
+    }
 
     //Client
     func presentClientProfile() {
@@ -93,6 +111,24 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
         //        self.present(profileNavi, animated: true, completion: nil)
     }
 
+//    プロフィール登録有無確認
+    func checkProfileCreated() -> String {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            fatalError ("Uidを取得出来ませんでした。")
+        }
+        let a = self.db.collection("users").document(uid).documentID
+        print(a)
+
+//            .whereField(UIDocument.value(), "==", uid)
+//            .get()
+        return
+            self.db.collection("users").document(uid).documentID
+        //            self.db.collection("shops").document(uid)
+//        admin.firestore().collection('user')
+//            .where('endDate', '==', undefined)
+//            .get()
+    }
+    
     
     //遷移
 //    func performSegueProfile(){

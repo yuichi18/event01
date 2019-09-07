@@ -17,5 +17,6 @@ target 'event' do
 #  pod 'FBSDKLoginKit'
 #pod 'JSQMessagesViewController', :git => 'https://github.com/jessesquires/JSQMessagesViewController', :tag => '7.2.0'
   pod 'MessageKit'
+  pod 'PKHUD'
 
 end

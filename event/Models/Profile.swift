@@ -16,7 +16,7 @@ class Profile {
     var userName: String?
     var gender: String?
     var age: Int?
-//    var imgName: String?
+    var imgName: String?
     var createAt: Timestamp
     var updateAt: Timestamp
     
@@ -27,7 +27,7 @@ class Profile {
         self.userName = value["userName"] as? String ?? nil
         self.gender = value["gender"] as? String ?? nil
         self.age = value["age"] as? Int ?? nil
-//        self.imgName = value["imgName"] as? String ?? nil
+        self.imgName = value["imgName"] as? String ?? nil
         self.createAt = value["create_at"] as? Timestamp ?? Timestamp(date: Date())
         self.updateAt = value["update_at"] as? Timestamp ?? Timestamp(date: Date())
     }
@@ -38,7 +38,7 @@ class Profile {
             "userName": self.userName as Any,
             "gender": self.gender as Any,
             "age": self.age as Any,
-//            "imgName": self.imgName as Any,
+            "imgName": self.imgName as Any,
             "create_at": self.createAt,
             "update_at": self.updateAt,
         ]
