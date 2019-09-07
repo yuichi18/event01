@@ -17,22 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYa-Wm-kIi">
-                                <rect key="frame" x="142" y="304.5" width="91" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <state key="normal" title="Login"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="99" translatesAutoresizingMaskIntoConstraints="NO" id="ldS-fc-RHm">
+                                <rect key="frame" x="53.5" y="226" width="268" height="215"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYa-Wm-kIi">
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="お客用ログイン"/>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z80-t2-zgI">
+                                        <rect key="frame" x="0.0" y="157" width="268" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="お店用ログイン"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xYa-Wm-kIi" firstAttribute="centerX" secondItem="qZl-Uf-sTf" secondAttribute="centerX" id="SAh-V1-B6J"/>
-                            <constraint firstItem="xYa-Wm-kIi" firstAttribute="centerY" secondItem="qZl-Uf-sTf" secondAttribute="centerY" id="jFl-8s-Pp3"/>
+                            <constraint firstItem="ldS-fc-RHm" firstAttribute="centerX" secondItem="qZl-Uf-sTf" secondAttribute="centerX" id="A7e-qU-a94"/>
+                            <constraint firstItem="ldS-fc-RHm" firstAttribute="centerY" secondItem="qZl-Uf-sTf" secondAttribute="centerY" id="Ht0-2o-AXi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zpl-3h-Bfp"/>
                     </view>
                     <navigationItem key="navigationItem" id="7j5-Yu-oSK"/>
                     <connections>
                         <outlet property="AuthBtn" destination="xYa-Wm-kIi" id="X3S-FI-1Jc"/>
+                        <outlet property="ClientBtn" destination="z80-t2-zgI" id="pjP-Oe-vtx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgg-A9-UZg" userLabel="First Responder" sceneMemberID="firstResponder"/>

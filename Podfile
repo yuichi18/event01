@@ -15,5 +15,7 @@ target 'event' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
 #  pod 'FBSDKLoginKit'
+#pod 'JSQMessagesViewController', :git => 'https://github.com/jessesquires/JSQMessagesViewController', :tag => '7.2.0'
+  pod 'MessageKit'
 
 end

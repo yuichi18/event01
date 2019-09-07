@@ -24,6 +24,7 @@ class ProfileUseCase {
         }
         return
             self.db.collection("users").document(uid)
+//            self.db.collection("shops").document(uid)
     }
     
     //Profile登録

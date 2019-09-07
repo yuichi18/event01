@@ -19,6 +19,11 @@
 		DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D2CCB22F45FBC006901F0 /* Profile.swift */; };
 		DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */; };
 		DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB751CF6232121DC00B1914E /* MainViewController.swift */; };
+		DBC948A423235FAA005CE048 /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC948A323235FAA005CE048 /* ClientMain.storyboard */; };
+		DBC948A6232367F3005CE048 /* ClientProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC948A5232367F3005CE048 /* ClientProfile.storyboard */; };
+		DBC948AA232369AD005CE048 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */; };
+		DBF63F5C232338F200B5305A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF63F5B232338F200B5305A /* ChatViewController.swift */; };
+		DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF63F5D2323415200B5305A /* MockMessage.swift */; };
 		DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB2EEA22EBB4C70017C694 /* Login.swift */; };
 		DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */; };
 		DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0923227FED0072B4E8 /* Shop.swift */; };
@@ -46,6 +51,11 @@
 		DB6D2CCB22F45FBC006901F0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
 		DB751CF6232121DC00B1914E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DBC948A323235FAA005CE048 /* ClientMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
+		DBC948A5232367F3005CE048 /* ClientProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientProfile.storyboard; sourceTree = "<group>"; };
+		DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
+		DBF63F5B232338F200B5305A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		DBF63F5D2323415200B5305A /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		DBFB2EEA22EBB4C70017C694 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		DBFD3E0923227FED0072B4E8 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
@@ -136,6 +146,8 @@
 				DB3E9A7E22F524630058B08E /* Main.storyboard */,
 				DB64F39722E8AF7900049015 /* Login.storyboard */,
 				DB0A9E3222F56951007D0C92 /* Profile.storyboard */,
+				DBC948A323235FAA005CE048 /* ClientMain.storyboard */,
+				DBC948A5232367F3005CE048 /* ClientProfile.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -148,6 +160,9 @@
 				DB751CF6232121DC00B1914E /* MainViewController.swift */,
 				DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */,
 				DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */,
+				DBF63F5B232338F200B5305A /* ChatViewController.swift */,
+				DBF63F5D2323415200B5305A /* MockMessage.swift */,
+				DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,11 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0A9E3322F56951007D0C92 /* Profile.storyboard in Resources */,
+				DBC948A423235FAA005CE048 /* ClientMain.storyboard in Resources */,
 				DB64F38A22E89DE100049015 /* LaunchScreen.storyboard in Resources */,
 				DB3E9A7F22F524630058B08E /* Main.storyboard in Resources */,
 				DB64F39622E8A3F500049015 /* GoogleService-Info.plist in Resources */,
 				DB64F38722E89DE100049015 /* Assets.xcassets in Resources */,
 				DB64F39822E8AF7900049015 /* Login.storyboard in Resources */,
+				DBC948A6232367F3005CE048 /* ClientProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,15 +331,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0AF99E22E9BD81000FABD5 /* ProfileViewController.swift in Sources */,
+				DBC948AA232369AD005CE048 /* ClientProfileViewController.swift in Sources */,
 				DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */,
 				DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */,
 				DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */,
 				DBFDB8AF22E9157C009AE68A /* LoginViewController.swift in Sources */,
 				DBFD3E1023228B390072B4E8 /* ShopUseCase.swift in Sources */,
+				DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */,
 				DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */,
 				DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */,
 				DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */,
 				DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */,
+				DBF63F5C232338F200B5305A /* ChatViewController.swift in Sources */,
 				DBFD3E0E23228A9E0072B4E8 /* ShopCollection.swift in Sources */,
 				DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */,
 				DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */,
