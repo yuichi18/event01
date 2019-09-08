@@ -7,6 +7,8 @@
 //
 
 //import Foundation
+import FirebaseStorage
+
 protocol ClientCollectionDelegate: class {
     func reload()
 }
@@ -77,7 +79,7 @@ class ClientCollection {
     //        }
     //    }
     
-    //    func getImageRef(imgName: String) -> StorageReference? {
-    //        return self.taskUseCase.getImageRef(imgName: imgName)
-    //    }
+    func getImageRef(id: String, imgName: String) -> StorageReference? {
+        return self.clientUseCase.getImageRef(id: id, imgName: imgName)
+        }
 }

@@ -77,7 +77,7 @@ class ClientUseCase {
         }
     }
     
-    //    let storageRef = Storage.storage().reference()
+        let storageRef = Storage.storage().reference()
     
     //    func saveImage(image: UIImage?, callback: @escaping ((String?) -> Void)){
     //        guard let image = image,
@@ -114,11 +114,11 @@ class ClientUseCase {
     //        }
     //    }
     
-    //    func getImageRef(imgName: String) -> StorageReference? {
-    //        guard let uid = Auth.auth().currentUser?.uid else {
-    //            return nil
-    //        }
-    //        let imageRef = storageRef.child(uid).child("\(imgName).jpg")
-    //        return imageRef
-    //    }
+    func getImageRef(id: String, imgName: String) -> StorageReference? {
+//            guard let uid = Auth.auth().currentUser?.uid else {
+//                return nil
+//            }
+            let imageRef = storageRef.child(id).child("\(imgName).jpg")
+            return imageRef
+        }
 }
