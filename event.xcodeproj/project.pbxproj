@@ -27,6 +27,8 @@
 		DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB2EEA22EBB4C70017C694 /* Login.swift */; };
 		DBFC07222324936C0026A3A0 /* ClientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC07212324936C0026A3A0 /* ClientProfile.swift */; };
 		DBFC0724232494470026A3A0 /* ClientProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC0723232494470026A3A0 /* ClientProfileUseCase.swift */; };
+		DBFC07282324A8B90026A3A0 /* MainClientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC07272324A8B90026A3A0 /* MainClientListTableViewController.swift */; };
+		DBFC072A2324AC2C0026A3A0 /* UIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC07292324AC2C0026A3A0 /* UIImageViewController.swift */; };
 		DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */; };
 		DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0923227FED0072B4E8 /* Shop.swift */; };
 		DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */; };
@@ -61,6 +63,8 @@
 		DBFB2EEA22EBB4C70017C694 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		DBFC07212324936C0026A3A0 /* ClientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfile.swift; sourceTree = "<group>"; };
 		DBFC0723232494470026A3A0 /* ClientProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileUseCase.swift; sourceTree = "<group>"; };
+		DBFC07272324A8B90026A3A0 /* MainClientListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainClientListTableViewController.swift; sourceTree = "<group>"; };
+		DBFC07292324AC2C0026A3A0 /* UIImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewController.swift; sourceTree = "<group>"; };
 		DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		DBFD3E0923227FED0072B4E8 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */,
 				DB751CF6232121DC00B1914E /* MainViewController.swift */,
 				DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */,
+				DBFC07272324A8B90026A3A0 /* MainClientListTableViewController.swift */,
 				DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */,
 				DBF63F5B232338F200B5305A /* ChatViewController.swift */,
 				DBF63F5D2323415200B5305A /* MockMessage.swift */,
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				DB20702422EB128C00A138E0 /* AlertViewController.swift */,
+				DBFC07292324AC2C0026A3A0 /* UIImageViewController.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */,
 				DBFC07222324936C0026A3A0 /* ClientProfile.swift in Sources */,
 				DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */,
+				DBFC072A2324AC2C0026A3A0 /* UIImageViewController.swift in Sources */,
 				DBFDB8AF22E9157C009AE68A /* LoginViewController.swift in Sources */,
 				DBFD3E1023228B390072B4E8 /* ShopUseCase.swift in Sources */,
 				DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */,
@@ -354,6 +361,7 @@
 				DBFD3E0E23228A9E0072B4E8 /* ShopCollection.swift in Sources */,
 				DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */,
 				DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */,
+				DBFC07282324A8B90026A3A0 /* MainClientListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

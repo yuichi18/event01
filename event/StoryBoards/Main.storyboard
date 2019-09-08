@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="657" y="-114"/>
         </scene>
-        <!--お店リスト-->
+        <!--MYお店リスト-->
         <scene sceneID="Csl-GW-zdv">
             <objects>
                 <tableViewController id="qoK-Eu-Fu7" customClass="MainTableViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,20 +48,47 @@
                             <outlet property="delegate" destination="qoK-Eu-Fu7" id="Vd0-Xn-WWF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="お店リスト" id="fKt-TK-jTf">
+                    <navigationItem key="navigationItem" title="MYお店リスト" id="fKt-TK-jTf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dxo-nm-SPH">
                             <connections>
                                 <action selector="addTappedBtn:" destination="qoK-Eu-Fu7" id="PXs-5r-rsD"/>
+                                <segue destination="he9-XT-dLk" kind="show" identifier="showToClientListViewController" id="arT-1d-MUE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="zP9-Jo-Bh9" kind="show" identifier="showToShopSearchViewController" id="cpY-UN-a7v"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaS-Ew-uny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="-812"/>
+        </scene>
+        <!--お店一覧-->
+        <scene sceneID="GSB-Zr-gaa">
+            <objects>
+                <tableViewController id="he9-XT-dLk" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DC1-Hg-Awt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="clientcell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clientcell" id="1GJ-xB-JYP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1GJ-xB-JYP" id="UTZ-M1-SS8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="he9-XT-dLk" id="aww-9T-0gr"/>
+                            <outlet property="delegate" destination="he9-XT-dLk" id="VPd-NF-N9K"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="お店一覧" id="LJp-dH-x7W"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzD-Ib-Yhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399" y="-1484"/>
         </scene>
         <!--お店検索-->
         <scene sceneID="JZR-5e-6PS">
@@ -72,25 +99,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お店の名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRT-B2-c0a">
-                                <rect key="frame" x="20" y="114" width="87" height="20.5"/>
+                                <rect key="frame" x="20" y="70" width="87" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOc-Qo-xTd">
-                                <rect key="frame" x="20" y="154.5" width="335" height="30"/>
+                                <rect key="frame" x="20" y="110.5" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お店の最寄り駅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-Rm-ibN">
-                                <rect key="frame" x="20" y="234.5" width="122" height="21"/>
+                                <rect key="frame" x="20" y="190.5" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9o-ZN-fvS">
-                                <rect key="frame" x="20" y="275.5" width="335" height="30"/>
+                                <rect key="frame" x="20" y="231.5" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
