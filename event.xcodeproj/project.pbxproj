@@ -25,6 +25,8 @@
 		DBF63F5C232338F200B5305A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF63F5B232338F200B5305A /* ChatViewController.swift */; };
 		DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF63F5D2323415200B5305A /* MockMessage.swift */; };
 		DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB2EEA22EBB4C70017C694 /* Login.swift */; };
+		DBFC07222324936C0026A3A0 /* ClientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC07212324936C0026A3A0 /* ClientProfile.swift */; };
+		DBFC0724232494470026A3A0 /* ClientProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC0723232494470026A3A0 /* ClientProfileUseCase.swift */; };
 		DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */; };
 		DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0923227FED0072B4E8 /* Shop.swift */; };
 		DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */; };
@@ -57,6 +59,8 @@
 		DBF63F5B232338F200B5305A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		DBF63F5D2323415200B5305A /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		DBFB2EEA22EBB4C70017C694 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		DBFC07212324936C0026A3A0 /* ClientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfile.swift; sourceTree = "<group>"; };
+		DBFC0723232494470026A3A0 /* ClientProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileUseCase.swift; sourceTree = "<group>"; };
 		DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		DBFD3E0923227FED0072B4E8 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSearchViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				DBFD3E0D23228A9E0072B4E8 /* ShopCollection.swift */,
 				DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */,
 				DBFD3E0F23228B390072B4E8 /* ShopUseCase.swift */,
+				DBFC0723232494470026A3A0 /* ClientProfileUseCase.swift */,
+				DBFC07212324936C0026A3A0 /* ClientProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,11 +340,13 @@
 				DBC948AA232369AD005CE048 /* ClientProfileViewController.swift in Sources */,
 				DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */,
 				DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */,
+				DBFC07222324936C0026A3A0 /* ClientProfile.swift in Sources */,
 				DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */,
 				DBFDB8AF22E9157C009AE68A /* LoginViewController.swift in Sources */,
 				DBFD3E1023228B390072B4E8 /* ShopUseCase.swift in Sources */,
 				DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */,
 				DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */,
+				DBFC0724232494470026A3A0 /* ClientProfileUseCase.swift in Sources */,
 				DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */,
 				DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */,
 				DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */,

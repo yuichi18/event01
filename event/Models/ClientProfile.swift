@@ -1,32 +1,30 @@
 //
-//  Profile.swift
+//  ClientProfile.swift
 //  event
 //
-//  Created by 祐一 on 2019/08/02.
+//  Created by 祐一 on 2019/09/08.
 //  Copyright © 2019 yuichi. All rights reserved.
 //
 
 //import Foundation
-
-//import UIKit
 import FirebaseFirestore
 
-class Profile {
-//    var id: String
-    var userName: String?
-    var gender: String?
-    var age: Int?
+class ClientProfile {
+    //    var id: String
+    var name: String?
+    var nearStation: String?
+    var hp: String?
     var imgName: String?
     var createAt: Timestamp
     var updateAt: Timestamp
     
     //初期値設定
     init(value: [String: Any?]) {
-//    init(id: String, value: [String: Any?]) {
-//        self.id = id
-        self.userName = value["userName"] as? String ?? nil
-        self.gender = value["gender"] as? String ?? nil
-        self.age = value["age"] as? Int ?? nil
+        //    init(id: String, value: [String: Any?]) {
+        //        self.id = id
+        self.name = value["name"] as? String ?? nil
+        self.nearStation = value["nearStation"] as? String ?? nil
+        self.hp = value["hp"] as? String ?? nil
         self.imgName = value["imgName"] as? String ?? nil
         self.createAt = value["create_at"] as? Timestamp ?? Timestamp(date: Date())
         self.updateAt = value["update_at"] as? Timestamp ?? Timestamp(date: Date())
@@ -35,9 +33,9 @@ class Profile {
     //Arrayに変換
     func toValueDict() -> [String: Any] {
         return [
-            "userName": self.userName as Any,
-            "gender": self.gender as Any,
-            "age": self.age as Any,
+            "name": self.name as Any,
+            "nearStation": self.nearStation as Any,
+            "hp": self.hp as Any,
             "imgName": self.imgName as Any,
             "create_at": self.createAt,
             "update_at": self.updateAt,

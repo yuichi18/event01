@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mjh-6f-KYS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,20 +9,103 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Client Profile View Controller-->
-        <scene sceneID="Vl9-A0-9Ar">
+        <!--ClientProfile-->
+        <scene sceneID="8Pq-uH-AUG">
             <objects>
-                <viewController storyboardIdentifier="toClientProfileView" id="o1a-5N-P2z" customClass="ClientProfileViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oOv-ph-Hem">
+                <viewController storyboardIdentifier="toClientProfileView" id="Mjh-6f-KYS" customClass="ClientProfileViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VDu-uh-8WJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="gsf-Ae-xxN"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-Bo-K2h">
+                                <rect key="frame" x="100" y="120" width="175" height="150"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="uLP-Ew-lwk"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3oY-iS-Hpn" appends="YES" id="AVc-R7-L0h"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="お店の名前を入力してください" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaU-Re-Cyz">
+                                <rect key="frame" x="0.0" y="370" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Agk-1S-db1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="お店の最寄り駅を入力してください" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTG-xl-xWg">
+                                <rect key="frame" x="0.0" y="420" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Kkj-Je-4zk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="お店のHPを入力してください" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6jC-qp-iV2">
+                                <rect key="frame" x="0.0" y="470" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="RAj-0F-IUw"/>
+                                    <constraint firstAttribute="height" constant="50" id="sK4-GC-K0o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6jC-qp-iV2" firstAttribute="top" secondItem="dTG-xl-xWg" secondAttribute="bottom" id="1sE-GJ-OJb"/>
+                            <constraint firstItem="dTG-xl-xWg" firstAttribute="leading" secondItem="uNH-Nq-NLo" secondAttribute="leading" id="E5B-cI-wMn"/>
+                            <constraint firstAttribute="trailing" secondItem="dTG-xl-xWg" secondAttribute="trailing" id="OOj-rU-5Ye"/>
+                            <constraint firstItem="6jC-qp-iV2" firstAttribute="leading" secondItem="uNH-Nq-NLo" secondAttribute="leading" id="OSr-HT-0nj"/>
+                            <constraint firstItem="RaU-Re-Cyz" firstAttribute="leading" secondItem="uNH-Nq-NLo" secondAttribute="leading" id="P3q-2T-xLi"/>
+                            <constraint firstAttribute="trailing" secondItem="6jC-qp-iV2" secondAttribute="trailing" id="Stf-YB-4d2"/>
+                            <constraint firstItem="o3L-Bo-K2h" firstAttribute="top" secondItem="uNH-Nq-NLo" secondAttribute="top" constant="100" id="Y3m-eI-VVi"/>
+                            <constraint firstItem="uNH-Nq-NLo" firstAttribute="trailing" secondItem="o3L-Bo-K2h" secondAttribute="trailing" constant="100" id="gcO-ob-M3U"/>
+                            <constraint firstItem="o3L-Bo-K2h" firstAttribute="leading" secondItem="uNH-Nq-NLo" secondAttribute="leading" constant="100" id="l71-yq-Qvq"/>
+                            <constraint firstItem="dTG-xl-xWg" firstAttribute="top" secondItem="RaU-Re-Cyz" secondAttribute="bottom" id="pNn-sG-hPL"/>
+                            <constraint firstItem="RaU-Re-Cyz" firstAttribute="top" secondItem="o3L-Bo-K2h" secondAttribute="bottom" constant="100" id="r7O-lM-BkX"/>
+                            <constraint firstAttribute="trailing" secondItem="RaU-Re-Cyz" secondAttribute="trailing" id="thD-vp-5tJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uNH-Nq-NLo"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ClientProfile" id="O49-K1-wiR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Sak-ud-ueu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K7x-xn-qJh" userLabel="Save">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="registerdClientTappedBtn:" destination="Mjh-6f-KYS" eventType="touchUpInside" id="XqJ-FX-T3z"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clientNameFieldText" destination="RaU-Re-Cyz" id="45q-XN-Sve"/>
+                        <outlet property="hpFieldText" destination="6jC-qp-iV2" id="bdp-W8-x2X"/>
+                        <outlet property="nearStationNameFieldText" destination="dTG-xl-xWg" id="NJ8-Ph-GVe"/>
+                        <outlet property="profileImageView" destination="o3L-Bo-K2h" id="yny-di-jj2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F5B-bM-JJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMz-SJ-AvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3oY-iS-Hpn">
+                    <connections>
+                        <action selector="didTouchImage:" destination="Mjh-6f-KYS" id="vUv-kz-IqY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="895" y="-254"/>
+            <point key="canvasLocation" x="1516" y="-299"/>
         </scene>
     </scenes>
 </document>
