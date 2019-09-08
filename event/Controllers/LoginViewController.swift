@@ -18,7 +18,7 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
     @IBOutlet weak var ClientBtn: UIButton!
     var presentProfileIdentification: Int! = 0
     let db = Firestore.firestore()
-    var checkProfile: String! = ""
+    var profileExsistedFlg = false
     
     
     var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
@@ -59,20 +59,25 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
         // 認証に成功した場合
         
         //プロフィール登録有無チェック
-        let checkProfile = checkProfileCreated()
-print(checkProfile)
+        profileExsistedFlg = checkProfileCreated()
+        print(profileExsistedFlg)
 //        既にログインしている時の遷移を記載する
         
         if presentProfileIdentification == 0 {
-//            if checkProfile == "" {
+            if profileExsistedFlg == false {
                 self.presentProfile()
-//            }
-//            else {
-//                self.presentMain()
-//            }
+            }
+            else {
+                self.presentMain()
+            }
         }
         else {
+            if profileExsistedFlg == false {
                 self.presentClientProfile()
+            }
+            else {
+                self.presentMain()
+            }
 //                var presentstoryBoardName :String! = "ClientProfile"
 //                var presentwithIdentifierName :String! = "toClientProfileView"
         }
@@ -112,21 +117,20 @@ print(checkProfile)
     }
 
 //    プロフィール登録有無確認
-    func checkProfileCreated() -> String {
+    func checkProfileCreated() -> Bool {
         guard let uid = Auth.auth().currentUser?.uid else {
             fatalError ("Uidを取得出来ませんでした。")
         }
-        let a = self.db.collection("users").document(uid).documentID
-        print(a)
-
-//            .whereField(UIDocument.value(), "==", uid)
-//            .get()
-        return
-            self.db.collection("users").document(uid).documentID
-        //            self.db.collection("shops").document(uid)
-//        admin.firestore().collection('user')
-//            .where('endDate', '==', undefined)
-//            .get()
+        var flg = false
+        let docRef = db.collection("users").document(uid)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                flg = true
+            } else {
+                flg = false
+            }
+        }
+        return flg
     }
     
     
