@@ -9,19 +9,14 @@
 import UIKit
 import FirebaseAuth
 
-class MainClientListTableViewController: UITableViewController,ShopCollectionDelegate {
-    
-    let shopCollection = ShopCollection.shared
+class MainClientListTableViewController: UITableViewController,ClientCollectionDelegate {
+
+    let clientCollection = ClientCollection.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shopCollection.delegate = self
+        clientCollection.delegate = self
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     //    override func didReceiveMemoryWarning() {
@@ -30,54 +25,54 @@ class MainClientListTableViewController: UITableViewController,ShopCollectionDel
     //    }
     
     
-    @IBAction func addTappedBtn(_ sender: Any) {
-        //        self.performSegue(withIdentifier: "showToShopSearchViewController", sender: nil)
-        self.performSegue(withIdentifier: "showToClientListViewController", sender: nil)
-    }
+//    @IBAction func addTappedBtn(_ sender: Any) {
+//        //        self.performSegue(withIdentifier: "showToShopSearchViewController", sender: nil)
+//        self.performSegue(withIdentifier: "showToClientListViewController", sender: nil)
+//    }
     
 }
 
 extension MainClientListTableViewController {
     // デリゲート
     func reload() {
-        print ("saved")
         self.tableView.reloadData()
     }
 }
 
+
 extension MainClientListTableViewController {
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return shopCollection.shops.count
+        return clientCollection.clients.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         print ("Section: " + String(indexPath.section) + " row:" + String(indexPath.row))
-        
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
+
         // Configure the cell...
-        
-        cell.textLabel?.text = shopCollection.shops[indexPath.row].shopName
-        
+
+        cell.textLabel?.text = clientCollection.clients[indexPath.row].name
+
         return cell
     }
-    
+
     // セルの選択
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        let addVC = storyboard?.instantiateViewController(withIdentifier: "ShopSearchViewController") as! ShopSearchViewController
-        addVC.selectedShop = shopCollection.shops[indexPath.row]
+        let addVC = storyboard?.instantiateViewController(withIdentifier: "ClientDetailViewController") as! ClientDetailViewController
+        addVC.selectedClient = clientCollection.clients[indexPath.row]
         self.navigationController?.pushViewController(addVC, animated: true)
         //        performSegue(withIdentifier: "showToTaskViewController", sender: selectedTask)
     }
-    
-    // スワイプで削除
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        shopCollection.removeShop(at: indexPath.row)
-    }
-    
+
+//    // スワイプで削除
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        shopCollection.removeShop(at: indexPath.row)
+//    }
+
 }
 

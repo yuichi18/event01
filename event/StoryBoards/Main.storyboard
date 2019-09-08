@@ -64,13 +64,13 @@
         <!--お店一覧-->
         <scene sceneID="GSB-Zr-gaa">
             <objects>
-                <tableViewController id="he9-XT-dLk" sceneMemberID="viewController">
+                <tableViewController id="he9-XT-dLk" customClass="MainClientListTableViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DC1-Hg-Awt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="clientcell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clientcell" id="1GJ-xB-JYP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="clientcell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="1GJ-xB-JYP">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1GJ-xB-JYP" id="UTZ-M1-SS8">
@@ -85,10 +85,84 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="お店一覧" id="LJp-dH-x7W"/>
+                    <connections>
+                        <segue destination="2on-ws-xCA" kind="show" identifier="showToClientDetailViewController" id="Q7h-yB-W6G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzD-Ib-Yhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1399" y="-1484"/>
+        </scene>
+        <!--お店詳細情報-->
+        <scene sceneID="HjP-9d-ahX">
+            <objects>
+                <viewController id="2on-ws-xCA" customClass="ClientDetailViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbp-gl-kOa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S9j-8M-z0m">
+                                <rect key="frame" x="100" y="164" width="175" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="RV8-3e-8b4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzx-ns-GQt">
+                                <rect key="frame" x="0.0" y="414" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jQM-Qz-JS6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi9-Z6-Djy">
+                                <rect key="frame" x="0.0" y="464" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EuB-jt-Xd1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xel-IZ-Ahj">
+                                <rect key="frame" x="0.0" y="514" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="31d-e4-sYV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yi9-Z6-Djy" firstAttribute="top" secondItem="Rzx-ns-GQt" secondAttribute="bottom" id="8fm-BK-CJp"/>
+                            <constraint firstItem="xel-IZ-Ahj" firstAttribute="top" secondItem="Yi9-Z6-Djy" secondAttribute="bottom" id="9TH-43-Xx9"/>
+                            <constraint firstItem="S9j-8M-z0m" firstAttribute="top" secondItem="QTg-i9-Mmf" secondAttribute="top" constant="100" id="GT3-TL-9pk"/>
+                            <constraint firstAttribute="trailing" secondItem="Yi9-Z6-Djy" secondAttribute="trailing" id="J5E-sR-8jg"/>
+                            <constraint firstItem="Rzx-ns-GQt" firstAttribute="leading" secondItem="QTg-i9-Mmf" secondAttribute="leading" id="QEn-7A-3pS"/>
+                            <constraint firstItem="xel-IZ-Ahj" firstAttribute="leading" secondItem="QTg-i9-Mmf" secondAttribute="leading" id="WMW-mx-b88"/>
+                            <constraint firstItem="Rzx-ns-GQt" firstAttribute="top" secondItem="S9j-8M-z0m" secondAttribute="bottom" constant="100" id="b14-QW-fpL"/>
+                            <constraint firstItem="QTg-i9-Mmf" firstAttribute="trailing" secondItem="S9j-8M-z0m" secondAttribute="trailing" constant="100" id="beT-WL-CxU"/>
+                            <constraint firstItem="Rzx-ns-GQt" firstAttribute="trailing" secondItem="QTg-i9-Mmf" secondAttribute="trailing" id="geT-Fl-Wxf"/>
+                            <constraint firstAttribute="trailing" secondItem="xel-IZ-Ahj" secondAttribute="trailing" id="n2G-KX-ukj"/>
+                            <constraint firstItem="S9j-8M-z0m" firstAttribute="leading" secondItem="QTg-i9-Mmf" secondAttribute="leading" constant="100" id="rbo-dt-xgy"/>
+                            <constraint firstItem="Yi9-Z6-Djy" firstAttribute="leading" secondItem="QTg-i9-Mmf" secondAttribute="leading" id="vGb-8h-5hq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QTg-i9-Mmf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="お店詳細情報" id="hJf-fh-o1I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxh-LQ-0H4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142" y="-1486"/>
         </scene>
         <!--お店検索-->
         <scene sceneID="JZR-5e-6PS">

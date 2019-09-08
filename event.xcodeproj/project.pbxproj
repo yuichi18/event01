@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DB0A9E3322F56951007D0C92 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A9E3222F56951007D0C92 /* Profile.storyboard */; };
 		DB0AF99E22E9BD81000FABD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */; };
+		DB15559C23250C8E00453414 /* ClientUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15559B23250C8E00453414 /* ClientUseCase.swift */; };
+		DB15559E2325111D00453414 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15559D2325111D00453414 /* Client.swift */; };
 		DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20702422EB128C00A138E0 /* AlertViewController.swift */; };
 		DB3E9A7F22F524630058B08E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E9A7E22F524630058B08E /* Main.storyboard */; };
 		DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB64F37F22E89DDE00049015 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 		DBC948A423235FAA005CE048 /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC948A323235FAA005CE048 /* ClientMain.storyboard */; };
 		DBC948A6232367F3005CE048 /* ClientProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC948A5232367F3005CE048 /* ClientProfile.storyboard */; };
 		DBC948AA232369AD005CE048 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */; };
+		DBF62E7C2325303300DC6E65 /* ClientCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF62E7B2325303300DC6E65 /* ClientCollection.swift */; };
+		DBF62E7E2325377800DC6E65 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF62E7D2325377800DC6E65 /* ClientDetailViewController.swift */; };
 		DBF63F5C232338F200B5305A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF63F5B232338F200B5305A /* ChatViewController.swift */; };
 		DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF63F5D2323415200B5305A /* MockMessage.swift */; };
 		DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB2EEA22EBB4C70017C694 /* Login.swift */; };
@@ -42,6 +46,8 @@
 		3F5F650445527F761DBC5A73 /* Pods_event.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_event.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0A9E3222F56951007D0C92 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DB15559B23250C8E00453414 /* ClientUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientUseCase.swift; sourceTree = "<group>"; };
+		DB15559D2325111D00453414 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		DB20702422EB128C00A138E0 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		DB3D2EC722EB5806007C7DC9 /* event.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = event.entitlements; sourceTree = "<group>"; };
 		DB3E9A7E22F524630058B08E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +64,8 @@
 		DBC948A323235FAA005CE048 /* ClientMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
 		DBC948A5232367F3005CE048 /* ClientProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientProfile.storyboard; sourceTree = "<group>"; };
 		DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
+		DBF62E7B2325303300DC6E65 /* ClientCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCollection.swift; sourceTree = "<group>"; };
+		DBF62E7D2325377800DC6E65 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
 		DBF63F5B232338F200B5305A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		DBF63F5D2323415200B5305A /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		DBFB2EEA22EBB4C70017C694 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 				DB751CF6232121DC00B1914E /* MainViewController.swift */,
 				DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */,
 				DBFC07272324A8B90026A3A0 /* MainClientListTableViewController.swift */,
+				DBF62E7D2325377800DC6E65 /* ClientDetailViewController.swift */,
 				DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */,
 				DBF63F5B232338F200B5305A /* ChatViewController.swift */,
 				DBF63F5D2323415200B5305A /* MockMessage.swift */,
@@ -180,12 +189,15 @@
 			isa = PBXGroup;
 			children = (
 				DB6D2CCB22F45FBC006901F0 /* Profile.swift */,
+				DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */,
+				DBFC07212324936C0026A3A0 /* ClientProfile.swift */,
+				DBFC0723232494470026A3A0 /* ClientProfileUseCase.swift */,
 				DBFD3E0923227FED0072B4E8 /* Shop.swift */,
 				DBFD3E0D23228A9E0072B4E8 /* ShopCollection.swift */,
-				DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */,
 				DBFD3E0F23228B390072B4E8 /* ShopUseCase.swift */,
-				DBFC0723232494470026A3A0 /* ClientProfileUseCase.swift */,
-				DBFC07212324936C0026A3A0 /* ClientProfile.swift */,
+				DB15559D2325111D00453414 /* Client.swift */,
+				DB15559B23250C8E00453414 /* ClientUseCase.swift */,
+				DBF62E7B2325303300DC6E65 /* ClientCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,6 +357,8 @@
 				DB0AF99E22E9BD81000FABD5 /* ProfileViewController.swift in Sources */,
 				DBC948AA232369AD005CE048 /* ClientProfileViewController.swift in Sources */,
 				DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */,
+				DB15559C23250C8E00453414 /* ClientUseCase.swift in Sources */,
+				DB15559E2325111D00453414 /* Client.swift in Sources */,
 				DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */,
 				DBFC07222324936C0026A3A0 /* ClientProfile.swift in Sources */,
 				DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */,
@@ -353,8 +367,10 @@
 				DBFD3E1023228B390072B4E8 /* ShopUseCase.swift in Sources */,
 				DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */,
 				DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */,
+				DBF62E7C2325303300DC6E65 /* ClientCollection.swift in Sources */,
 				DBFC0724232494470026A3A0 /* ClientProfileUseCase.swift in Sources */,
 				DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */,
+				DBF62E7E2325377800DC6E65 /* ClientDetailViewController.swift in Sources */,
 				DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */,
 				DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */,
 				DBF63F5C232338F200B5305A /* ChatViewController.swift in Sources */,

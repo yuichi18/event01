@@ -155,6 +155,21 @@ class ProfileViewController: UIViewController {
         //        self.presentMain(storyboardName: "Main", storyboardId: "MainTabBarController")
         //        self.navigationController?.popViewController(animated: true)
     }
+    
+//    ログアウト処理
+//    @IBAction func logoutTappedBtn(_ sender: Any) {
+//        do {
+//            try Auth.auth().signOut()
+//            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+//            let appDelegate = AppDelegate.shared
+//            appDelegate.window?.rootViewController = loginVC
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
+//    }
+    
+    
 }
 
 extension ProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
