@@ -14,7 +14,10 @@ import PKHUD
 class ClientDetailViewController: UIViewController {
 
     let clientCollection = ClientCollection.shared
+    let shopCollection = ShopCollection.shared
     var selectedClient: Client?
+    var selectedShop: Shop?
+    
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nearStationLabel: UILabel!
@@ -29,7 +32,7 @@ class ClientDetailViewController: UIViewController {
 
             self.nameLabel.text = _selectedClient.name
             self.nearStationLabel.text = _selectedClient.nearStation
-
+            self.hpLabel.text = _selectedClient.hp
             
             if let imageName = _selectedClient.imgName{
                 let id = _selectedClient.id
@@ -45,6 +48,33 @@ class ClientDetailViewController: UIViewController {
         }
 //        self.configureGoogleMap()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func didTouchSaveBtn(_ sender: Any) {
+        
+        let shop = shopCollection.createShop()
+        
+        shop.shopName = nameLabel.text
+        shop.shopNearStation = nearStationLabel.text
+        
+        self.shopCollection.addShop(shop)
+//        if let _ = self.selectedShop {
+//            shop.updateAt = Timestamp(date: Date())
+//            self.shopCollection.editShop(shop)
+//        } else {
+//            self.shopCollection.addShop(shop)
+//        }
+//        self.navigationController?.popViewController(animated: true)
+        // pop 2 view controllers
+//        self.navigationController?.popViewControllers(viewsToPop: 2)
+        self.presentMainTable()
+    }
+    
+    func presentMainTable() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileNavi = storyboard.instantiateViewController(withIdentifier: "toMainTableView")
+        self.navigationController?.pushViewController(profileNavi, animated: true)
+        //        self.present(profileNavi, animated: true, completion: nil)
     }
     
 

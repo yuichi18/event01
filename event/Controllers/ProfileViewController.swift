@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
     var selectedProfile: Profile?
     var didChangeImage = false
     var uiimagename: String?
+    let Resize:CGSize = CGSize.init(width: 200, height:200)
     
     
     override func viewDidLoad() {
@@ -188,7 +189,8 @@ extension ProfileViewController: UINavigationControllerDelegate, UIImagePickerCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             self.profileImageView.contentMode = .scaleAspectFit
-            self.profileImageView.image = pickedImage.resized(toWidth: 500)
+            self.profileImageView.image = pickedImage.resize(size: Resize)
+//                        self.profileImageView.image = pickedImage.resized(toWidth: 500)
             self.didChangeImage = true
         }
         

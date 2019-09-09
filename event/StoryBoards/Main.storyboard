@@ -28,7 +28,7 @@
         <!--MYお店リスト-->
         <scene sceneID="Csl-GW-zdv">
             <objects>
-                <tableViewController id="qoK-Eu-Fu7" customClass="MainTableViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="toMainTableView" id="qoK-Eu-Fu7" customClass="MainTableViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Irx-s0-4PX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QTg-i9-Mmf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="お店詳細情報" id="hJf-fh-o1I"/>
+                    <navigationItem key="navigationItem" title="お店詳細情報" id="hJf-fh-o1I">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="nGU-1b-WD3">
+                            <connections>
+                                <action selector="didTouchSaveBtn:" destination="2on-ws-xCA" id="rvr-vU-yu8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="clientImageView" destination="S9j-8M-z0m" id="QPs-Cy-M3Q"/>
                         <outlet property="hpLabel" destination="xel-IZ-Ahj" id="UKC-3Z-TUQ"/>
