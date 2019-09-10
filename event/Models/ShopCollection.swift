@@ -28,8 +28,8 @@ class ShopCollection {
         self.load()
     }
     
-    func createShop() -> Shop {
-        let id = self.shopUseCase.createShopId()
+    func createShop(_ id: String) -> Shop {
+        let id = id
         return Shop(id: id, value: [:])
     }
     

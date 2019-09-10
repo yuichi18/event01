@@ -17,11 +17,6 @@ class MainTableViewController: UITableViewController,ShopCollectionDelegate {
         super.viewDidLoad()
         shopCollection.delegate = self
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
 //    override func didReceiveMemoryWarning() {
@@ -68,9 +63,9 @@ extension MainTableViewController {
     // セルの選択
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        let addVC = storyboard?.instantiateViewController(withIdentifier: "ShopSearchViewController") as! ShopSearchViewController
-        addVC.selectedShop = shopCollection.shops[indexPath.row]
-        self.navigationController?.pushViewController(addVC, animated: true)
+        let toVC = storyboard?.instantiateViewController(withIdentifier: "ClientDetailViewController") as! ClientDetailViewController
+        toVC.selectedShop = shopCollection.shops[indexPath.row]
+        self.navigationController?.pushViewController(toVC, animated: true)
         //        performSegue(withIdentifier: "showToTaskViewController", sender: selectedTask)
     }
     

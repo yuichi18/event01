@@ -17,22 +17,30 @@ class ClientDetailViewController: UIViewController {
     let shopCollection = ShopCollection.shared
     var selectedClient: Client?
     var selectedShop: Shop?
+    var uiImageViewName: String?
+    var id: String = ""
     
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nearStationLabel: UILabel!
     @IBOutlet weak var hpLabel: UILabel!
     @IBOutlet weak var clientImageView: UIImageView!
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        お店一覧から遷移した場合
         if let _selectedClient = self.selectedClient{
+            
+            self.saveBtn.isEnabled = true
 
+            self.id = _selectedClient.id
             self.nameLabel.text = _selectedClient.name
             self.nearStationLabel.text = _selectedClient.nearStation
             self.hpLabel.text = _selectedClient.hp
+            self.uiImageViewName = _selectedClient.imgName
             
             if let imageName = _selectedClient.imgName{
                 let id = _selectedClient.id
@@ -43,19 +51,43 @@ class ClientDetailViewController: UIViewController {
                     }
                 }
             }
-        } else {
+        
+//        MYお店一覧から遷移した場合
+//            あとで関数化
+        } else if let _selectedShop = self.selectedShop {
+            
+            self.saveBtn.isEnabled = false
+            
+            self.id = _selectedShop.id
+            self.nameLabel.text = _selectedShop.shopName
+            self.nearStationLabel.text = _selectedShop.shopNearStation
+            self.hpLabel.text = _selectedShop.shopHp
+            self.uiImageViewName = _selectedShop.imgName
+            
+            if let imageName = _selectedShop.imgName{
+                let id = _selectedShop.id
+                HUD.show(.progress)
+                if let ref = self.clientCollection.getImageRef(id: id, imgName: imageName) {
+                    self.clientImageView.sd_setImage(with: ref, placeholderImage: nil) { (img, err, type, ref) in
+                        HUD.hide()
+                    }
+                }
+            }
 //            self.configureLocationManager()
         }
+        
 //        self.configureGoogleMap()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func didTouchSaveBtn(_ sender: Any) {
         
-        let shop = shopCollection.createShop()
+        let shop = shopCollection.createShop(id)
         
         shop.shopName = nameLabel.text
         shop.shopNearStation = nearStationLabel.text
+        shop.shopHp = hpLabel.text
+        shop.imgName = uiImageViewName
         
         self.shopCollection.addShop(shop)
 //        if let _ = self.selectedShop {

@@ -26,30 +26,30 @@ class ShopSearchViewController: UIViewController {
     }
     
 
-    @IBAction func didTouchSaveBtn(_ sender: Any) {
-        guard let shopName = shopNameTextField.text else { return }
-        if (shopName.isEmpty) {
-            self.singleAlert(title: "お店の名前を入力してください", message: nil)
-            return
-        }
-        
-        var shop = shopCollection.createShop()
-        
-        if let _selectedShop = self.selectedShop {
-            shop = _selectedShop
-        }
-        
-        shop.shopName = shopName
-        shop.shopNearStation = shopNearStationTextField.text
-        
-        if let _ = self.selectedShop {
-            shop.updateAt = Timestamp(date: Date())
-            self.shopCollection.editShop(shop)
-        } else {
-            self.shopCollection.addShop(shop)
-        }
-        self.navigationController?.popViewController(animated: true)
-    }
+//    @IBAction func didTouchSaveBtn(_ sender: Any) {
+//        guard let shopName = shopNameTextField.text else { return }
+//        if (shopName.isEmpty) {
+//            self.singleAlert(title: "お店の名前を入力してください", message: nil)
+//            return
+//        }
+//        
+//        var shop = shopCollection.createShop(id)
+//        
+//        if let _selectedShop = self.selectedShop {
+//            shop = _selectedShop
+//        }
+//        
+//        shop.shopName = shopName
+//        shop.shopNearStation = shopNearStationTextField.text
+//        
+//        if let _ = self.selectedShop {
+//            shop.updateAt = Timestamp(date: Date())
+//            self.shopCollection.editShop(shop)
+//        } else {
+//            self.shopCollection.addShop(shop)
+//        }
+//        self.navigationController?.popViewController(animated: true)
+//    }
     /*
     // MARK: - Navigation
 

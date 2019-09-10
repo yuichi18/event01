@@ -170,6 +170,7 @@
                         <outlet property="hpLabel" destination="xel-IZ-Ahj" id="UKC-3Z-TUQ"/>
                         <outlet property="nameLabel" destination="Rzx-ns-GQt" id="XCw-Un-k1g"/>
                         <outlet property="nearStationLabel" destination="Yi9-Z6-Djy" id="fhC-jB-vBl"/>
+                        <outlet property="saveBtn" destination="nGU-1b-WD3" id="DCy-bU-tZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxh-LQ-0H4" userLabel="First Responder" sceneMemberID="firstResponder"/>
