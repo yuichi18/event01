@@ -27,13 +27,13 @@ class ClientPostCollection {
         self.load()
     }
     
-    func createPost(_ id: String) -> ClientPost {
-        let id = id
+    func createPost() -> ClientPost {
+        let id = self.clientPostUseCase.createPostId()
         return ClientPost(id: id, value: [:])
     }
     
     // リストの追加
-    func addClientPost (_ post: ClientPost) {
+    func addPost (_ post: ClientPost) {
         self.posts.append(post)
         self.clientPostUseCase.addPost(post)
         self.save()

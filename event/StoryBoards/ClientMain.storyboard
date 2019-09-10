@@ -58,22 +58,93 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8M4-of-vb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="-1478"/>
+            <point key="canvasLocation" x="881" y="-1478"/>
         </scene>
-        <!--Client Post View Controller-->
+        <!--投稿画面-->
         <scene sceneID="poJ-ev-Fy1">
             <objects>
                 <viewController storyboardIdentifier="ClientPostViewController" id="0Op-Wr-MsB" customClass="ClientPostViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s88-4V-cMB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qla-6K-kfi">
+                                <rect key="frame" x="50" y="114" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZNf-li-GtQ">
+                                <rect key="frame" x="50" y="155" width="275" height="37.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFM-gF-ubW">
+                                <rect key="frame" x="50" y="242.5" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qm7-w4-0jb">
+                                <rect key="frame" x="50" y="433.5" width="275" height="115.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K9L-NB-M0j" appends="YES" id="NUL-aV-M3P"/>
+                                </connections>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-Mv-FXh">
+                                <rect key="frame" x="50" y="283.5" width="275" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9SM-6W-YxK"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qm7-w4-0jb" firstAttribute="leading" secondItem="Uvl-6o-ESH" secondAttribute="leading" constant="50" id="2pt-Pp-0cJ"/>
+                            <constraint firstItem="ZNf-li-GtQ" firstAttribute="leading" secondItem="Uvl-6o-ESH" secondAttribute="leading" constant="50" id="9Vp-jP-OXM"/>
+                            <constraint firstItem="Fu0-Mv-FXh" firstAttribute="centerY" secondItem="s88-4V-cMB" secondAttribute="centerY" id="CGj-Oc-GLP"/>
+                            <constraint firstItem="lFM-gF-ubW" firstAttribute="leading" secondItem="Uvl-6o-ESH" secondAttribute="leading" constant="50" id="DeP-Uy-Y7e"/>
+                            <constraint firstItem="Uvl-6o-ESH" firstAttribute="trailing" secondItem="Qm7-w4-0jb" secondAttribute="trailing" constant="50" id="MIG-sA-k5D"/>
+                            <constraint firstItem="Fu0-Mv-FXh" firstAttribute="leading" secondItem="Uvl-6o-ESH" secondAttribute="leading" constant="50" id="PAk-6z-xv2"/>
+                            <constraint firstItem="ZNf-li-GtQ" firstAttribute="top" secondItem="qla-6K-kfi" secondAttribute="bottom" constant="20" id="Qpz-Xb-iyt"/>
+                            <constraint firstItem="qla-6K-kfi" firstAttribute="top" secondItem="Uvl-6o-ESH" secondAttribute="top" constant="50" id="Thr-IN-5fa"/>
+                            <constraint firstItem="Uvl-6o-ESH" firstAttribute="trailing" secondItem="Fu0-Mv-FXh" secondAttribute="trailing" constant="50" id="UOv-1r-ce4"/>
+                            <constraint firstItem="lFM-gF-ubW" firstAttribute="top" secondItem="ZNf-li-GtQ" secondAttribute="bottom" constant="50" id="Zc4-gC-B4k"/>
+                            <constraint firstItem="Fu0-Mv-FXh" firstAttribute="top" secondItem="lFM-gF-ubW" secondAttribute="bottom" constant="20" id="ijk-2t-fnr"/>
+                            <constraint firstItem="Uvl-6o-ESH" firstAttribute="trailing" secondItem="ZNf-li-GtQ" secondAttribute="trailing" constant="50" id="kz8-G0-ecy"/>
+                            <constraint firstItem="Uvl-6o-ESH" firstAttribute="bottom" secondItem="Qm7-w4-0jb" secondAttribute="bottom" constant="69" id="r1q-1d-hXB"/>
+                            <constraint firstItem="Qm7-w4-0jb" firstAttribute="top" secondItem="Fu0-Mv-FXh" secondAttribute="bottom" constant="50" id="vLK-2G-NGR"/>
+                            <constraint firstItem="qla-6K-kfi" firstAttribute="leading" secondItem="Uvl-6o-ESH" secondAttribute="leading" constant="50" id="w4B-6e-qpJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Uvl-6o-ESH"/>
                     </view>
+                    <navigationItem key="navigationItem" title="投稿画面" id="WcC-Mu-p9X">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="sT5-sj-aLT">
+                            <connections>
+                                <action selector="didTouchSaveBtn:" destination="0Op-Wr-MsB" id="Rp1-cM-poE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailTextViewField" destination="Fu0-Mv-FXh" id="nhe-tL-yct"/>
+                        <outlet property="imageView" destination="Qm7-w4-0jb" id="GDd-wA-cn2"/>
+                        <outlet property="titleTextField" destination="ZNf-li-GtQ" id="ob9-t5-6gE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPk-h9-l3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="K9L-NB-M0j">
+                    <connections>
+                        <action selector="didTouchImage:" destination="0Op-Wr-MsB" id="vfr-fq-8rl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1729" y="-1479"/>
+            <point key="canvasLocation" x="1676" y="-1478.4107946026988"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ojC-Hh-TOa">
