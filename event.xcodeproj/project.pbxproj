@@ -11,6 +11,11 @@
 		DB0AF99E22E9BD81000FABD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */; };
 		DB15559C23250C8E00453414 /* ClientUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15559B23250C8E00453414 /* ClientUseCase.swift */; };
 		DB15559E2325111D00453414 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15559D2325111D00453414 /* Client.swift */; };
+		DB1F8536232845C50080E348 /* ClientPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F8535232845C50080E348 /* ClientPostTableViewController.swift */; };
+		DB1F85382328487B0080E348 /* ClientPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F85372328487B0080E348 /* ClientPost.swift */; };
+		DB1F853A2328494D0080E348 /* ClientPostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F85392328494D0080E348 /* ClientPostUseCase.swift */; };
+		DB1F853C23284B610080E348 /* ClientPostCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F853B23284B610080E348 /* ClientPostCollection.swift */; };
+		DB1F853E23284EDB0080E348 /* ClientPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F853D23284EDB0080E348 /* ClientPostViewController.swift */; };
 		DB20702522EB128C00A138E0 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20702422EB128C00A138E0 /* AlertViewController.swift */; };
 		DB3E9A7F22F524630058B08E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3E9A7E22F524630058B08E /* Main.storyboard */; };
 		DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB64F37F22E89DDE00049015 /* AppDelegate.swift */; };
@@ -49,6 +54,11 @@
 		DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB15559B23250C8E00453414 /* ClientUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientUseCase.swift; sourceTree = "<group>"; };
 		DB15559D2325111D00453414 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		DB1F8535232845C50080E348 /* ClientPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPostTableViewController.swift; sourceTree = "<group>"; };
+		DB1F85372328487B0080E348 /* ClientPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPost.swift; sourceTree = "<group>"; };
+		DB1F85392328494D0080E348 /* ClientPostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPostUseCase.swift; sourceTree = "<group>"; };
+		DB1F853B23284B610080E348 /* ClientPostCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPostCollection.swift; sourceTree = "<group>"; };
+		DB1F853D23284EDB0080E348 /* ClientPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPostViewController.swift; sourceTree = "<group>"; };
 		DB20702422EB128C00A138E0 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		DB3D2EC722EB5806007C7DC9 /* event.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = event.entitlements; sourceTree = "<group>"; };
 		DB3E9A7E22F524630058B08E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +193,8 @@
 				DB751CF6232121DC00B1914E /* MainViewController.swift */,
 				DBF63F5B232338F200B5305A /* ChatViewController.swift */,
 				DBF63F5D2323415200B5305A /* MockMessage.swift */,
+				DB1F8535232845C50080E348 /* ClientPostTableViewController.swift */,
+				DB1F853D23284EDB0080E348 /* ClientPostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +212,9 @@
 				DB15559D2325111D00453414 /* Client.swift */,
 				DB15559B23250C8E00453414 /* ClientUseCase.swift */,
 				DBF62E7B2325303300DC6E65 /* ClientCollection.swift */,
+				DB1F85372328487B0080E348 /* ClientPost.swift */,
+				DB1F85392328494D0080E348 /* ClientPostUseCase.swift */,
+				DB1F853B23284B610080E348 /* ClientPostCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -365,12 +380,15 @@
 				DBFB2EEB22EBB4C70017C694 /* Login.swift in Sources */,
 				DBFC07222324936C0026A3A0 /* ClientProfile.swift in Sources */,
 				DBFD3E0A23227FED0072B4E8 /* Shop.swift in Sources */,
+				DB1F853A2328494D0080E348 /* ClientPostUseCase.swift in Sources */,
 				DBFC072A2324AC2C0026A3A0 /* UIImageViewController.swift in Sources */,
 				DBFDB8AF22E9157C009AE68A /* LoginViewController.swift in Sources */,
 				DBFD3E1023228B390072B4E8 /* ShopUseCase.swift in Sources */,
 				DBF63F5E2323415200B5305A /* MockMessage.swift in Sources */,
 				DBFD3E0823227A1E0072B4E8 /* MainTableViewController.swift in Sources */,
 				DBF62E7C2325303300DC6E65 /* ClientCollection.swift in Sources */,
+				DB1F853E23284EDB0080E348 /* ClientPostViewController.swift in Sources */,
+				DB1F8536232845C50080E348 /* ClientPostTableViewController.swift in Sources */,
 				DBFC0724232494470026A3A0 /* ClientProfileUseCase.swift in Sources */,
 				DB64F38022E89DDE00049015 /* AppDelegate.swift in Sources */,
 				DBF62E7E2325377800DC6E65 /* ClientDetailViewController.swift in Sources */,
@@ -381,7 +399,9 @@
 				DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */,
 				DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */,
 				DBC72DD52327F2E6007BB4CC /* TextFieldMove+Keyboard.swift in Sources */,
+				DB1F85382328487B0080E348 /* ClientPost.swift in Sources */,
 				DBFC07282324A8B90026A3A0 /* MainClientListTableViewController.swift in Sources */,
+				DB1F853C23284B610080E348 /* ClientPostCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
