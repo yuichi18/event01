@@ -67,6 +67,26 @@ class ClientProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.configureObserver()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        self.removeObserver() // Notificationを画面が消えるときに削除
+    }
+    
+    //    キーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //        outputText.text = inputText.text
+        self.view.endEditing(true)
+    }
+    
+    
     //    画像タッチ後処理
     @IBAction func didTouchImage(_ sender: Any) {
         
@@ -177,7 +197,7 @@ extension ClientProfileViewController: UINavigationControllerDelegate, UIImagePi
     //　撮影もしくは画像を選択したら呼ばれる
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
-            self.profileImageView.contentMode = .scaleAspectFit
+            self.profileImageView.contentMode = .scaleAspectFill
             self.profileImageView.image = pickedImage.resized(toWidth: 500)
             self.didChangeImage = true
         }

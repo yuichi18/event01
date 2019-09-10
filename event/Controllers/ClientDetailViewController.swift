@@ -104,10 +104,12 @@ class ClientDetailViewController: UIViewController {
     
     func presentMainTable() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let profileNavi = storyboard.instantiateViewController(withIdentifier: "toMainTableView")
-        self.navigationController?.pushViewController(profileNavi, animated: true)
-        //        self.present(profileNavi, animated: true, completion: nil)
+        let Navi = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+//        self.navigationController?.pushViewController(profileNavi, animated: true)
+//        self.present(Navi, animated: true, completion: nil)
+        self.present(Navi, animated: true, completion: nil)
     }
+
     
 
     /*

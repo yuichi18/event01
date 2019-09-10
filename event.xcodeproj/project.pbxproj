@@ -21,6 +21,7 @@
 		DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D2CCB22F45FBC006901F0 /* Profile.swift */; };
 		DB6D2CCE22F46166006901F0 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */; };
 		DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB751CF6232121DC00B1914E /* MainViewController.swift */; };
+		DBC72DD52327F2E6007BB4CC /* TextFieldMove+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC72DD42327F2E6007BB4CC /* TextFieldMove+Keyboard.swift */; };
 		DBC948A423235FAA005CE048 /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC948A323235FAA005CE048 /* ClientMain.storyboard */; };
 		DBC948A6232367F3005CE048 /* ClientProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC948A5232367F3005CE048 /* ClientProfile.storyboard */; };
 		DBC948AA232369AD005CE048 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */; };
@@ -61,6 +62,7 @@
 		DB6D2CCB22F45FBC006901F0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DB6D2CCD22F46166006901F0 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
 		DB751CF6232121DC00B1914E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DBC72DD42327F2E6007BB4CC /* TextFieldMove+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldMove+Keyboard.swift"; sourceTree = "<group>"; };
 		DBC948A323235FAA005CE048 /* ClientMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
 		DBC948A5232367F3005CE048 /* ClientProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientProfile.storyboard; sourceTree = "<group>"; };
 		DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				DB20702422EB128C00A138E0 /* AlertViewController.swift */,
 				DBFC07292324AC2C0026A3A0 /* UIImageViewController.swift */,
+				DBC72DD42327F2E6007BB4CC /* TextFieldMove+Keyboard.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				DBFD3E0E23228A9E0072B4E8 /* ShopCollection.swift in Sources */,
 				DBFD3E0C2322882F0072B4E8 /* ShopSearchViewController.swift in Sources */,
 				DB751CF7232121DC00B1914E /* MainViewController.swift in Sources */,
+				DBC72DD52327F2E6007BB4CC /* TextFieldMove+Keyboard.swift in Sources */,
 				DBFC07282324A8B90026A3A0 /* MainClientListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +529,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.cross-app.event";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.event-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.cross-app.event";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.event-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

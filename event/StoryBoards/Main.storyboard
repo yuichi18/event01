@@ -292,7 +292,7 @@
         <!--Item-->
         <scene sceneID="h8O-iV-r6w">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aub-CF-Udb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="toNaviMainTableView" automaticallyAdjustsScrollViewInsets="NO" id="Aub-CF-Udb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="kB9-CL-6V0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mc3-JD-giU">

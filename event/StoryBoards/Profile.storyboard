@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--プロフィール-->
         <scene sceneID="zFC-fU-3tI">
             <objects>
                 <viewController storyboardIdentifier="toProfileView" id="Kxv-Fn-bC0" customClass="ProfileViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="adv-QZ-qgg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Kce-f8-5dH">
+                    <navigationItem key="navigationItem" title="プロフィール" id="Kce-f8-5dH">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fgI-MR-V3s">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YTh-9P-EMu" userLabel="Save">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
