@@ -42,6 +42,26 @@ class ClientPostViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//        super.viewWillAppear(animated)
+//        self.configureObserver()
+//
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//
+//        super.viewWillDisappear(animated)
+//        self.removeObserver() // Notificationを画面が消えるときに削除
+//    }
+    
+    //    キーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //        outputText.text = inputText.text
+        self.view.endEditing(true)
+    }
+    
+    
     @IBAction func didTouchImage(_ sender: Any) {
         let alert = UIAlertController(title:"", message: "選択してください", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "カメラで撮影", style: .default, handler: {

@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="881" y="-1478"/>
         </scene>
-        <!--投稿画面-->
+        <!--新規投稿画面-->
         <scene sceneID="poJ-ev-Fy1">
             <objects>
                 <viewController storyboardIdentifier="ClientPostViewController" id="0Op-Wr-MsB" customClass="ClientPostViewController" customModule="event" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,12 +99,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9SM-6W-YxK"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qm7-w4-0jb" firstAttribute="leading" secondItem="Uvl-6o-ESH" secondAttribute="leading" constant="50" id="2pt-Pp-0cJ"/>
                             <constraint firstItem="ZNf-li-GtQ" firstAttribute="leading" secondItem="Uvl-6o-ESH" secondAttribute="leading" constant="50" id="9Vp-jP-OXM"/>
@@ -124,7 +123,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uvl-6o-ESH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="投稿画面" id="WcC-Mu-p9X">
+                    <navigationItem key="navigationItem" title="新規投稿画面" id="WcC-Mu-p9X">
                         <barButtonItem key="rightBarButtonItem" title="保存" id="sT5-sj-aLT">
                             <connections>
                                 <action selector="didTouchSaveBtn:" destination="0Op-Wr-MsB" id="Rp1-cM-poE"/>
@@ -156,9 +155,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="UnT-fk-WnU" kind="relationship" relationship="viewControllers" id="4BL-Yh-gwt"/>
-                        <segue destination="10x-Pm-NiG" kind="relationship" relationship="viewControllers" id="oGe-8a-8qw"/>
-                        <segue destination="hBB-UJ-Ccc" kind="relationship" relationship="viewControllers" id="DaW-f8-aNI"/>
+                        <segue destination="hBB-UJ-Ccc" kind="relationship" relationship="viewControllers" id="JHQ-6R-l6j"/>
+                        <segue destination="UnT-fk-WnU" kind="relationship" relationship="viewControllers" id="p8Z-Rb-YnR"/>
+                        <segue destination="10x-Pm-NiG" kind="relationship" relationship="viewControllers" id="jqD-Ru-ivp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SN-LM-yFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
