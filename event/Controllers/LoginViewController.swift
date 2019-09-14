@@ -24,6 +24,7 @@ class LoginViewController: UIViewController,FUIAuthDelegate {
     var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
     // 認証に使用するプロバイダの選択
     let providers: [FUIAuthProvider] = [
+        FUIEmailAuth(),
         FUIGoogleAuth(),
         FUIFacebookAuth(),
 //        FUITwitterAuth(),

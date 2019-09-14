@@ -11,6 +11,7 @@ target 'event' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   #  pod 'Firebase/Analytics'
+  pod 'FirebaseUI/Email'
   pod 'FirebaseUI'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
