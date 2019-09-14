@@ -17,7 +17,7 @@
 		DB1F853C23284B610080E348 /* ClientPostCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F853B23284B610080E348 /* ClientPostCollection.swift */; };
 		DB1F853E23284EDB0080E348 /* ClientPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F853D23284EDB0080E348 /* ClientPostViewController.swift */; };
 		DB1FAFA1232A7C480052F433 /* MainTimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FAFA0232A7C480052F433 /* MainTimelineTableViewController.swift */; };
-		DB1FAFA3232A84270052F433 /* MainPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FAFA2232A84270052F433 /* MainPostViewController.swift */; };
+		DB1FAFA3232A84270052F433 /* TimeLIneDetailtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FAFA2232A84270052F433 /* TimeLIneDetailtViewController.swift */; };
 		DB1FAFA5232A89270052F433 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FAFA4232A89270052F433 /* Post.swift */; };
 		DB1FAFA7232A89900052F433 /* PostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FAFA6232A89900052F433 /* PostUseCase.swift */; };
 		DB1FAFAB232A8D710052F433 /* PostCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FAFAA232A8D710052F433 /* PostCollection.swift */; };
@@ -66,7 +66,7 @@
 		DB1F853B23284B610080E348 /* ClientPostCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPostCollection.swift; sourceTree = "<group>"; };
 		DB1F853D23284EDB0080E348 /* ClientPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPostViewController.swift; sourceTree = "<group>"; };
 		DB1FAFA0232A7C480052F433 /* MainTimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimelineTableViewController.swift; sourceTree = "<group>"; };
-		DB1FAFA2232A84270052F433 /* MainPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostViewController.swift; sourceTree = "<group>"; };
+		DB1FAFA2232A84270052F433 /* TimeLIneDetailtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLIneDetailtViewController.swift; sourceTree = "<group>"; };
 		DB1FAFA4232A89270052F433 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DB1FAFA6232A89900052F433 /* PostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUseCase.swift; sourceTree = "<group>"; };
 		DB1FAFAA232A8D710052F433 /* PostCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollection.swift; sourceTree = "<group>"; };
@@ -208,16 +208,16 @@
 				DB0AF99D22E9BD81000FABD5 /* ProfileViewController.swift */,
 				DBC948A9232369AD005CE048 /* ClientProfileViewController.swift */,
 				DBFD3E0723227A1E0072B4E8 /* MainTableViewController.swift */,
-				DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */,
 				DBFC07272324A8B90026A3A0 /* MainClientListTableViewController.swift */,
 				DBF62E7D2325377800DC6E65 /* ClientDetailViewController.swift */,
-				DB751CF6232121DC00B1914E /* MainViewController.swift */,
 				DBF63F5B232338F200B5305A /* ChatViewController.swift */,
-				DBF63F5D2323415200B5305A /* MockMessage.swift */,
 				DB1F8535232845C50080E348 /* ClientPostTableViewController.swift */,
 				DB1F853D23284EDB0080E348 /* ClientPostViewController.swift */,
 				DB1FAFA0232A7C480052F433 /* MainTimelineTableViewController.swift */,
-				DB1FAFA2232A84270052F433 /* MainPostViewController.swift */,
+				DB1FAFA2232A84270052F433 /* TimeLIneDetailtViewController.swift */,
+				DBFD3E0B2322882F0072B4E8 /* ShopSearchViewController.swift */,
+				DBF63F5D2323415200B5305A /* MockMessage.swift */,
+				DB751CF6232121DC00B1914E /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,15 +232,15 @@
 				DBFD3E0923227FED0072B4E8 /* Shop.swift */,
 				DBFD3E0D23228A9E0072B4E8 /* ShopCollection.swift */,
 				DBFD3E0F23228B390072B4E8 /* ShopUseCase.swift */,
-				DB15559D2325111D00453414 /* Client.swift */,
 				DB1FAFA4232A89270052F433 /* Post.swift */,
+				DB1FAFA6232A89900052F433 /* PostUseCase.swift */,
+				DB1FAFAA232A8D710052F433 /* PostCollection.swift */,
+				DB15559D2325111D00453414 /* Client.swift */,
 				DB15559B23250C8E00453414 /* ClientUseCase.swift */,
 				DBF62E7B2325303300DC6E65 /* ClientCollection.swift */,
-				DB1FAFA6232A89900052F433 /* PostUseCase.swift */,
 				DB1F85372328487B0080E348 /* ClientPost.swift */,
 				DB1F85392328494D0080E348 /* ClientPostUseCase.swift */,
 				DB1F853B23284B610080E348 /* ClientPostCollection.swift */,
-				DB1FAFAA232A8D710052F433 /* PostCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0AF99E22E9BD81000FABD5 /* ProfileViewController.swift in Sources */,
-				DB1FAFA3232A84270052F433 /* MainPostViewController.swift in Sources */,
+				DB1FAFA3232A84270052F433 /* TimeLIneDetailtViewController.swift in Sources */,
 				DBC948AA232369AD005CE048 /* ClientProfileViewController.swift in Sources */,
 				DB6D2CCC22F45FBC006901F0 /* Profile.swift in Sources */,
 				DB15559C23250C8E00453414 /* ClientUseCase.swift in Sources */,
