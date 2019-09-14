@@ -18,6 +18,10 @@ class MainTimelineTableViewController: UITableViewController,PostCollectionDeleg
         postCollection.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        postCollection.delegate = self
+    }
     //    override func didReceiveMemoryWarning() {
     //        super.didReceiveMemoryWarning()
     //        // Dispose of any resources that can be recreated.

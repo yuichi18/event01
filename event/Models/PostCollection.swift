@@ -33,12 +33,12 @@ class PostCollection {
 //        return ClientPost(id: id, value: [:])
 //    }
 //
-//    // リストの追加
-//    func addPost (_ post: ClientPost) {
-//        self.posts.append(post)
+    // リストの追加
+    func addPost (_ post: Post) {
+        self.posts.append(post)
 //        self.clientPostUseCase.addPost(post)
 //        self.save()
-//    }
+    }
 //
 //    // リストの削除
 //    func removePost (at: Int) {

@@ -13,16 +13,25 @@ import FirebaseStorage
 
 class PostUseCase {
     
-    //    クライアントコレクションを接続先に設定すr
-//    let collectionRef = Firestore.firestore().collection("clients").document(uid).collection("posts")
-    
+    //    クライアントコレクションを接続先に設定する
+//    let collectionRef = Firestore.firestore().collection("clients").
+//    let postCollection: PostCollection
     let db = Firestore.firestore()
     private func getCollectionRef () -> CollectionReference {
         guard let uid = Auth.auth().currentUser?.uid else {
             fatalError ("Uidを取得出来ませんでした。")
         }
-        return self.db.collection("client").document(uid).collection("posts")
+        return self.db.collection("users").document(uid).collection("shops")
     }
+    
+//    let db = Firestore.firestore()
+//    private func getCollectionRef () -> CollectionReference {
+//        guard let uid = Auth.auth().currentUser?.uid else {
+//            fatalError ("Uidを取得出来ませんでした。")
+//        }
+//        return self.db.collection("client").document(uid).collection("posts")
+//    }
+    
 //        func createShopId() -> String {
 //            let id = self.getCollectionRef().document().documentID
 //            return id
@@ -66,7 +75,8 @@ class PostUseCase {
 
     func fetchPostDocuments(callback: @escaping ([Post]?) -> Void){
         let collectionRef = getCollectionRef()
-        collectionRef.getDocuments(source: .default) { (snapshot, err) in
+        collectionRef.addSnapshotListener { (snapshot, err) in
+//        collectionRef.getDocuments(source: .default) { (snapshot, err) in
             guard err == nil,
                 let _snapshot = snapshot,
                 !_snapshot.isEmpty else {
@@ -74,15 +84,92 @@ class PostUseCase {
                     callback(nil)
                     return
             }
-            print("データ取得成功")
-            let postCollection: [Post] = _snapshot.documents.compactMap{ (snapshot) in
-                let id = snapshot.documentID
-                let value = snapshot.data()
-                return Post(id :id ,value: value)
+            print("clientデータ取得成功")
+            //            let postCollection: [Post]
+            for document in snapshot!.documents {
+                print("\(document.documentID) => \(document.data())")
+                var clientID = document.documentID
+                print(clientID)
+                var postcollectionRef = self.db.collection("clients").document(clientID).collection("posts")
+                postcollectionRef.addSnapshotListener { (querySnapshot, err) in
+//                postcollectionRef.getDocuments() { (querySnapshot, err) in
+                    guard err == nil,
+                        let _querysnapshot = querySnapshot,
+                        !_querysnapshot.isEmpty else {
+                            print("データ取得失敗",err.debugDescription)
+                            callback(nil)
+                            return
+                    }
+                    print("postデータ取得成功")
+//                    var posts: [Post] = []
+//                    var post:Post
+//                    for document in _querysnapshot.documents {
+//                        post.id = _querysnapshot.documents
+//                        post.value = _querysnapshot.data()
+//                        self.posts.append(post)
+//                    }1
+                    
+                    let postCollection: [Post] = _querysnapshot.documents.compactMap{ (snapshot) in
+                        let id = snapshot.documentID
+                        let value = snapshot.data()
+
+                        return Post(id :id ,value: value)
+                    }
+                    callback(postCollection)
+
+                }
             }
-            callback(postCollection)
         }
     }
+    
+//
+//                    if let err = err {
+//                        print("Error getting documents: \(err)")
+//                    } else {
+//                        var posts:[PostCollection.Post] = []
+//                        let postCollection: [Post] = []
+//                        for document in querySnapshot!.documents {
+//                            print("\(accountName): \(document.documentID) => \(document.data())")
+//                            let post = try! FirestoreDecoder().decode(INDX01FirestoreService.PortfolioItem.self, from: document.data())
+//
+//                            items.append(pi )
+//
+//                                        let postCollection: [Post] = _snapshot.documents.compactMap{ (snapshot) in
+//                                            let id = snapshot.documentID
+//                                            let value = snapshot.data()
+//                                            return Post(id :id ,value: value)
+//                                        }
+//                                        callback(postCollection)
+                    
+                
+           
+//            let postCollection: [Post] = _snapshot.documents.compactMap{ (snapshot) in
+//                let id = snapshot.documentID
+//                let value = snapshot.data()
+//                return Post(id :id ,value: value)
+//            }
+//            callback(postCollection)
+
+    
+//    func fetchPostDocuments(callback: @escaping ([Post]?) -> Void){
+//        let collectionRef = getCollectionRef()
+//        collectionRef.getDocuments(source: .default) { (snapshot, err) in
+//            guard err == nil,
+//                let _snapshot = snapshot,
+//                !_snapshot.isEmpty else {
+//                    print("データ取得失敗",err.debugDescription)
+//                    callback(nil)
+//                    return
+//            }
+//            print("データ取得成功")
+//            let postCollection: [Post] = _snapshot.documents.compactMap{ (snapshot) in
+//                let id = snapshot.documentID
+//                let value = snapshot.data()
+//                return Post(id :id ,value: value)
+//            }
+//            callback(postCollection)
+//        }
+//    }
 
     let storageRef = Storage.storage().reference()
 

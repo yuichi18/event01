@@ -198,6 +198,7 @@ extension ClientProfileViewController: UINavigationControllerDelegate, UIImagePi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             self.profileImageView.contentMode = .scaleAspectFill
+//            self.profileImageView.image = pickedImage.resize(size: Resize)
             self.profileImageView.image = pickedImage.resized(toWidth: 500)
             self.didChangeImage = true
         }

@@ -20,7 +20,7 @@ class ClientPostUseCase {
         guard let uid = Auth.auth().currentUser?.uid else {
             fatalError ("Uidを取得出来ませんでした。")
         }
-        return self.db.collection("client").document(uid).collection("posts")
+        return self.db.collection("clients").document(uid).collection("posts")
     }
     
     func createPostId() -> String {

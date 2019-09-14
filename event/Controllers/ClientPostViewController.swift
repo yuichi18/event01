@@ -161,7 +161,7 @@ extension ClientPostViewController: UINavigationControllerDelegate, UIImagePicke
     //　撮影もしくは画像を選択したら呼ばれる
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
-            self.imageView.contentMode = .scaleAspectFit
+            self.imageView.contentMode = .scaleAspectFill
             self.imageView.image = pickedImage.resized(toWidth: 300)
             self.didChangeImage = true
         }

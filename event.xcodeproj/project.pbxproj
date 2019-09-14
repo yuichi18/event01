@@ -195,8 +195,8 @@
 				DB0A9E3222F56951007D0C92 /* Profile.storyboard */,
 				DBC948A5232367F3005CE048 /* ClientProfile.storyboard */,
 				DB3E9A7E22F524630058B08E /* Main.storyboard */,
-				DB1FAFAC232A8E110052F433 /* New Group */,
 				DBC948A323235FAA005CE048 /* ClientMain.storyboard */,
+				DB1FAFAC232A8E110052F433 /* New Group */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
