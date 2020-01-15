@@ -9,7 +9,8 @@
 import FirebaseFirestore
 
 class Post {
-    var id: String
+//    var id: String
+    var id: String?
     var title: String?
     var detail: String?
     var imgName: String?
@@ -17,8 +18,10 @@ class Post {
     var updateAt: Timestamp
     
     //初期値設定
-    init(id: String, value: [String: Any?]) {
-        self.id = id
+//    init(id: String, value: [String: Any?]) {
+    init(value: [String: Any?]) {
+//        self.id = id
+        self.id = value["id"] as? String ?? nil
         self.title = value["title"] as? String ?? nil
         self.detail = value["detail"] as? String ?? nil
         self.imgName = value["imgName"] as? String ?? nil
@@ -29,6 +32,7 @@ class Post {
     //Arrayに変換
     func toValueDict() -> [String: Any] {
         return [
+            "id": self.id as Any,
             "title": self.title as Any,
             "detail": self.detail as Any,
             "imgName": self.imgName as Any,

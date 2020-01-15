@@ -34,11 +34,11 @@ class PostCollection {
 //    }
 //
     // リストの追加
-    func addPost (_ post: Post) {
-        self.posts.append(post)
-//        self.clientPostUseCase.addPost(post)
-//        self.save()
-    }
+//    func addPost (_ post: Post) {
+//        self.posts.append(post)
+////        self.clientPostUseCase.addPost(post)
+////        self.save()
+//    }
 //
 //    // リストの削除
 //    func removePost (at: Int) {
@@ -59,14 +59,17 @@ class PostCollection {
 //    }
     
     private func load() {
-        self.postUseCase.fetchPostDocuments { (posts) in
-            guard let _posts = posts else {
-//                self.save() //Console側とかで空にされたら
-                return
-            }
-            self.posts = _posts
-//            self.save()
-        }
+        let _posts = self.postUseCase.fetchPostDocuments()
+        self.posts = _posts
+        
+//        self.postUseCase.fetchPostDocuments { (posts) in
+//            guard let _posts = posts else {
+////                self.save() //Console側とかで空にされたら
+//                return
+//            }
+//            self.posts = _posts
+////            self.save()
+//        }
     }
     
 //    func saveImage(image: UIImage?, callback: @escaping ((String?) -> Void)){

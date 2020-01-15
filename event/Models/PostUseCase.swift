@@ -17,6 +17,7 @@ class PostUseCase {
 //    let collectionRef = Firestore.firestore().collection("clients").
 //    let postCollection: PostCollection
     let db = Firestore.firestore()
+    var getposts: [Post] = []
     private func getCollectionRef () -> CollectionReference {
         guard let uid = Auth.auth().currentUser?.uid else {
             fatalError ("Uidを取得出来ませんでした。")
@@ -73,54 +74,69 @@ class PostUseCase {
     //        }
     //    }
 
-    func fetchPostDocuments(callback: @escaping ([Post]?) -> Void){
+//    func fetchPostDocuments(callback: @escaping ([Post]?) -> Void){
+    func fetchPostDocuments() -> [Post]{
+//        var posts: [Post] = []
+//        let post:Post
         let collectionRef = getCollectionRef()
-        collectionRef.addSnapshotListener { (snapshot, err) in
-//        collectionRef.getDocuments(source: .default) { (snapshot, err) in
+//        collectionRef.addSnapshotListener { (snapshot, err) in
+                    collectionRef.getDocuments(source: .default) { (snapshot, err) in
             guard err == nil,
                 let _snapshot = snapshot,
                 !_snapshot.isEmpty else {
                     print("データ取得失敗",err.debugDescription)
-                    callback(nil)
+                    //                    callback(nil)
                     return
             }
             print("clientデータ取得成功")
             //            let postCollection: [Post]
+            
+//            var posts: [Post] = []
+//            var post:Post
+            
             for document in snapshot!.documents {
                 print("\(document.documentID) => \(document.data())")
-                var clientID = document.documentID
+                let clientID = document.documentID
                 print(clientID)
-                var postcollectionRef = self.db.collection("clients").document(clientID).collection("posts")
-                postcollectionRef.addSnapshotListener { (querySnapshot, err) in
-//                postcollectionRef.getDocuments() { (querySnapshot, err) in
+                let postcollectionRef = self.db.collection("clients").document(clientID).collection("posts")
+//                postcollectionRef.addSnapshotListener { (querySnapshot, err) in
+                                    postcollectionRef.getDocuments(source: .default) { (querySnapshot, err) in
                     guard err == nil,
                         let _querysnapshot = querySnapshot,
                         !_querysnapshot.isEmpty else {
                             print("データ取得失敗",err.debugDescription)
-                            callback(nil)
+                            //                            callback(nil)
                             return
                     }
                     print("postデータ取得成功")
-//                    var posts: [Post] = []
-//                    var post:Post
-//                    for document in _querysnapshot.documents {
-//                        post.id = _querysnapshot.documents
-//                        post.value = _querysnapshot.data()
-//                        self.posts.append(post)
-//                    }1
                     
-                    let postCollection: [Post] = _querysnapshot.documents.compactMap{ (snapshot) in
-                        let id = snapshot.documentID
-                        let value = snapshot.data()
-
-                        return Post(id :id ,value: value)
+                    
+                    for postdocument in _querysnapshot.documents {
+                        let post = Post(value:[:])
+                        post.id = postdocument.documentID
+                        //                        post.value = postdocument.data()
+                        var postValue = postdocument.data()
+                        post.title = postValue["title"] as? String
+                        post.detail = postValue["detail"] as? String
+                        post.imgName = postValue["imgName"] as? String
+//                        post.createAt = postValue["createAt"] as? Timestamp
+//                        post.updateAt = postValue["updateAt"] as? Timestamp
+                        self.getposts.append(post)
                     }
-                    callback(postCollection)
-
+                    
+                    //                    let postCollection: [Post] = _querysnapshot.documents.compactMap{ (snapshot) in
+                    //                        let id = snapshot.documentID
+                    //                        let value = snapshot.data()
+                    //
+                    //                        return Post(id :id ,value: value)
+                    //                    }
                 }
             }
         }
+            return getposts
+        //                callback(PostCollection)
     }
+
     
 //
 //                    if let err = err {
